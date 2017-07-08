@@ -17,6 +17,8 @@
     $_SESSION["side1"] = "";
     $_SESSION["side2"] = "";
     $_SESSION["side3"] = "";
+    $_SESSION["rollVisible"] = "visible";
+    $_SESSION["stopVisible"] = "invisible";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if(array_key_exists('submit',$_POST)){
@@ -30,18 +32,23 @@
       $_SESSION["side1"] = "rolling";
       $_SESSION["side2"] = "rolling";
       $_SESSION["side3"] = "rolling";
+      $_SESSION["rollVisible"] = "invisible";
+      $_SESSION["stopVisible"] = "visible";
     }
 
     function stopRoll() {
-      $_SESSION["side1"] = "d" . strval(mt_rand(1,6));
-      $_SESSION["side2"] = "d" . strval(mt_rand(1,6));
-      $_SESSION["side3"] = "d" . strval(mt_rand(1,6));
+      $roll1 = mt_rand(1,6);
+      $roll2 = mt_rand(1,6);
+      $roll3 = mt_rand(1,6);
+      $_SESSION["side1"] = "d" . strval($roll1);
+      $_SESSION["side2"] = "d" . strval($roll2);
+      $_SESSION["side3"] = "d" . strval($roll3);
     }
   ?>
 
   <form method="post">
-    <input type="submit" name="submit" value="ROLL">
-    <input type="submit" name="submit2" value="STOP">
+    <input type="submit" name="submit" value="ROLL" id="<?php echo $_SESSION["rollVisible"] ?>">
+    <input type="submit" value="STOP" id="<?php echo $_SESSION["stopVisible"] ?>">
   </form>
 
   <div class="container">

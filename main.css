@@ -4,6 +4,14 @@
   border: 1px solid black;
 }
 
+#invisible {
+  visibility: hidden;
+}
+
+#visible {
+  visibility: visible;
+}
+
 .die {
   margin: 10px;
   width: 111px;
