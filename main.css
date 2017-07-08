@@ -1,0 +1,26 @@
+.container {
+  width: 401px;
+  height: 131px;
+  border: 1px solid black;
+}
+
+.die {
+  margin: 10px;
+  width: 111px;
+  height: 111px;
+  background-image: url("die1.png");
+  display: inline-block;
+}
+
+.die.rolling {
+  animation: roll 1s infinite linear;
+}
+
+@keyframes roll {
+    0%   { background-image: url("die1.png"); }
+    16%  { background-image: url("die2.png"); }
+    32%  { background-image: url("die3.png"); }
+    48%  { background-image: url("die4.png"); }
+    64%  { background-image: url("die5.png"); }
+    100% { background-image: url("die6.png"); }
+}
