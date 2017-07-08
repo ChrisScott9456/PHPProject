@@ -33,38 +33,9 @@
     }
 
     function stopRoll() {
-      switch(mt_rand(1,6)) {
-        case 1:
-          $_SESSION["side1"] = "one";
-          $_SESSION["side2"] = "one";
-          $_SESSION["side3"] = "one";
-          break;
-        case 2:
-          $_SESSION["side1"] = "two";
-          $_SESSION["side2"] = "two";
-          $_SESSION["side3"] = "two";
-          break;
-        case 3:
-          $_SESSION["side1"] = "three";
-          $_SESSION["side2"] = "three";
-          $_SESSION["side3"] = "three";
-          break;
-        case 4:
-          $_SESSION["side1"] = "four";
-          $_SESSION["side2"] = "four";
-          $_SESSION["side3"] = "four";
-          break;
-        case 5:
-          $_SESSION["side1"] = "five";
-          $_SESSION["side2"] = "five";
-          $_SESSION["side3"] = "five";
-          break;
-        case 6:
-          $_SESSION["side1"] = "six";
-          $_SESSION["side2"] = "six";
-          $_SESSION["side3"] = "six";
-          break;
-      }
+      $_SESSION["side1"] = "d" . strval(mt_rand(1,6));
+      $_SESSION["side2"] = "d" . strval(mt_rand(1,6));
+      $_SESSION["side3"] = "d" . strval(mt_rand(1,6));
     }
   ?>
 
