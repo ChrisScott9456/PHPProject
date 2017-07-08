@@ -16,12 +16,12 @@
   animation: roll 1s infinite linear;
 }
 
-.die.1 { background-image: url("die1.png"); }
-.die.2 { background-image: url("die2.png"); }
-.die.3 { background-image: url("die3.png"); }
-.die.4 { background-image: url("die4.png"); }
-.die.5 { background-image: url("die5.png"); }
-.die.6 { background-image: url("die6.png"); }
+.die.one { background-image: url("die1.png"); }
+.die.two { background-image: url("die2.png"); }
+.die.three { background-image: url("die3.png"); }
+.die.four { background-image: url("die4.png"); }
+.die.five { background-image: url("die5.png"); }
+.die.six { background-image: url("die6.png"); }
 
 @keyframes roll {
     0%   { background-image: url("die1.png"); }
