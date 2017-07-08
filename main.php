@@ -25,6 +25,10 @@
     function roll() {
       $_SESSION["txt"] = "rolling";
     }
+
+    function stopRoll() {
+      $_SESSION["txt"] = mt_rand(1,6);
+    }
   ?>
 
   <form method="post">
