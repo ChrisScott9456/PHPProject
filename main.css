@@ -1,6 +1,44 @@
+.buttonRoll {
+  background: red;
+  color: #FFF;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  height: 50px;
+  width: 100px;
+  text-shadow:none;
+}
+
+.buttonRoll:hover {
+  background-color: #800;
+}
+
+.buttonStop {
+  background: red;
+  color: #FFF;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  height: 50px;
+  width: 100px;
+  text-shadow:none;
+}
+
+.buttonStop:hover {
+
+}
+
 .container {
+  margin: auto;
   width: 401px;
   height: 131px;
+  border: 1px solid black;
+}
+
+.container2 {
+  margin: auto;
+  width: 100px;
+  height: 50px;
   border: 1px solid black;
 }
 
@@ -9,7 +47,13 @@
 }
 
 #visible {
+  width: 50px;
   visibility: visible;
+}
+
+#center {
+  display: block;
+  margin: auto;
 }
 
 .die {
