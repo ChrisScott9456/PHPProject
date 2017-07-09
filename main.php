@@ -91,15 +91,23 @@
     <div class="die <?php echo $_SESSION["Dside3"] ?>"></div>
   </div>
 
+  <br>
+
   <div class="container mid">
-    <p id="center">Dealer's Score:</p>
-    <br>
-    <p id="center"><?php echo $_SESSION["Dtot"] ?></p>
-    <a href="main.php"><img src="vs.png" id="center"></img></a>
-    <p id="center">Player's Score:</p>
-    <br>
-    <p id="center"><?php echo $_SESSION["tot"] ?></p>
+    <div class="container mid left">
+      <p id="center">Dealer's Score:</p>
+      <p id="center"><?php echo $_SESSION["Dtot"] ?></p>
+    </div>
+    <div class="container mid middle">
+      <a href="main.php"><img src="vs.png" id="center"></img></a>
+    </div>
+    <div class="container mid right">
+      <p id="center">Player's Score:</p>
+      <p id="center"><?php echo $_SESSION["tot"] ?></p>
+    </div>
   </div>
+
+  <br>
 
   <div class="container">
     <div class="die <?php echo $_SESSION["side1"] ?>"></div>

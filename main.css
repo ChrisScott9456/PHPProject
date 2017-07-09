@@ -34,8 +34,34 @@
 .container.mid {
   padding: 20px;
   margin: auto;
-  width: 585px;
+  width: 697px;
   height: 300px;
+}
+
+.container.mid.left {
+  margin: 0;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+}
+
+.container.mid.right {
+  margin: 0;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+}
+
+.container.mid.middle {
+  vertical-align: top;
+  margin: 0;
+  margin-right: 25px;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border: none;
 }
 
 .container2 {
