@@ -35,6 +35,10 @@
     $_SESSION["rollVisible"] = "visible";
     $_SESSION["stopVisible"] = "invisible";
 
+    //Win Condition
+    $_SESSION["winCondition"] = "";
+    $_SESSION["winVisible"] = "invisible";
+
     //Checks if button has been pressed to start/stop rolling
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if(array_key_exists('submit',$_POST)){
@@ -82,10 +86,24 @@
       $_SESSION["Dside1"] = "d" . strval($Droll1);
       $_SESSION["Dside2"] = "d" . strval($Droll2);
       $_SESSION["Dside3"] = "d" . strval($Droll3);
+
+      //Determine if the player or the dealer wins
+      if($_SESSION["tot"] > $_SESSION["Dtot"]) {
+        $_SESSION["winCondition"] = "You Win!";
+      }else if($_SESSION["tot"] < $_SESSION["Dtot"]) {
+        $_SESSION["winCondition"] = "Dealer Wins!";
+      }else {
+        $_SESSION["winCondition"] = "Draw!";
+      }
+
+      //Set Game Over message to visible
+      $_SESSION["winVisible"] = "visible";
     }
   ?>
 
-  <h1>Dice Game</h1>
+  <a href="main.php"><h1>Dice Game</h1></a>
+
+  <a href="main.php"><div class="gameover" id="<?php echo $_SESSION["winVisible"] ?>"><?php echo $_SESSION["winCondition"] ?></div></a>
 
   <div class="container">
     <div class="die <?php echo $_SESSION["Dside1"] ?>"></div>

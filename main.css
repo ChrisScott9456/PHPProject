@@ -1,7 +1,35 @@
+body {
+  font-family: Verdana, Georgia,sans-serif;
+  background-image: url("bg.png");
+  color: white;
+}
+
 h1 {
   margin: 20px auto;
   font-size: 50px;
   text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gameover{
+  position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
+  font-size:80px; color:white; font-weight:bold; text-align:center;
+  text-indent:0;
+  line-height:500px;
+}
+
+.gameover#visible {
+  animation: gameover 2s linear forwards;
+}
+
+@keyframes gameover{
+  0%{left:-5000px;bottom:100%;}
+  97%{left:-5000px;bottom:100%;}
+  100%{ left:0px;}
 }
 
 .buttonRoll {
@@ -10,7 +38,7 @@ h1 {
   border: 2px solid #eee;
   border-radius: 15px;
   height: 50px;
-  width: 100px;
+  width: 50px;
 }
 
 .buttonRoll:hover {
@@ -18,12 +46,13 @@ h1 {
 }
 
 .buttonStop {
+  margin-left: 49px;
   background: red;
   color: #FFF;
   border: 2px solid #eee;
   border-radius: 15px;
   height: 50px;
-  width: 100px;
+  width: 50px;
 }
 
 .buttonStop:hover {
@@ -32,9 +61,9 @@ h1 {
 
 .container {
   margin: auto;
-  width: 401px;
+  width: 405px;
   height: 131px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .container.mid {
@@ -46,18 +75,18 @@ h1 {
 
 .container.mid.left {
   margin: 0;
-  width: 175px;
+  width: 170px;
   height: 75px;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   display: inline-block;
 }
 
 .container.mid.right {
   margin: 0;
-  width: 175px;
+  width: 170px;
   height: 75px;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   display: inline-block;
 }
@@ -77,7 +106,7 @@ h1 {
   padding: 10px;
   width: 155px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 #invisible {
@@ -85,7 +114,6 @@ h1 {
 }
 
 #visible {
-  width: 50px;
   visibility: visible;
 }
 
