@@ -1,31 +1,27 @@
 .buttonRoll {
-  background: red;
+  background: #00FF00;
   color: #FFF;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
+  border: 2px solid #eee;
+  border-radius: 15px;
   height: 50px;
   width: 100px;
-  text-shadow:none;
 }
 
 .buttonRoll:hover {
-  background-color: #800;
+  background-color: #008000;
 }
 
 .buttonStop {
   background: red;
   color: #FFF;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
+  border: 2px solid #eee;
+  border-radius: 15px;
   height: 50px;
   width: 100px;
-  text-shadow:none;
 }
 
 .buttonStop:hover {
-
+  background-color: #800;
 }
 
 .container {
@@ -35,9 +31,17 @@
   border: 1px solid black;
 }
 
+.container.mid {
+  padding: 20px;
+  margin: auto;
+  width: 585px;
+  height: 300px;
+}
+
 .container2 {
   margin: auto;
-  width: 100px;
+  padding: 10px;
+  width: 155px;
   height: 50px;
   border: 1px solid black;
 }
@@ -52,8 +56,10 @@
 }
 
 #center {
-  display: block;
-  margin: auto;
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
+  margin: 10px;
 }
 
 .die {

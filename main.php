@@ -20,6 +20,7 @@
     $roll1 = "";
     $roll2 = "";
     $roll3 = "";
+    $_SESSION["tot"] = "0";
 
     //Dealer's Dice
     $_SESSION["Dside1"] = "";
@@ -28,6 +29,7 @@
     $Droll1 = "";
     $Droll2 = "";
     $Droll3 = "";
+    $_SESSION["Dtot"] = "0";
 
     //Button Visibility
     $_SESSION["rollVisible"] = "visible";
@@ -63,6 +65,7 @@
       $roll1 = mt_rand(1,6);
       $roll2 = mt_rand(1,6);
       $roll3 = mt_rand(1,6);
+      $_SESSION["tot"] = $roll1 + $roll2 + $roll3;
 
       //Set class of player dice to display correct side
       $_SESSION["side1"] = "d" . strval($roll1);
@@ -73,6 +76,7 @@
       $Droll1 = mt_rand(1,6);
       $Droll2 = mt_rand(1,6);
       $Droll3 = mt_rand(1,6);
+      $_SESSION["Dtot"] = $Droll1 + $Droll2 + $Droll3;
 
       //Set class of dealer dice to display correct side
       $_SESSION["Dside1"] = "d" . strval($Droll1);
@@ -87,13 +91,23 @@
     <div class="die <?php echo $_SESSION["Dside3"] ?>"></div>
   </div>
 
-  <a href="main.php"><img src="vs.png" id="center"></img></a>
+  <div class="container mid">
+    <p id="center">Dealer's Score:</p>
+    <br>
+    <p id="center"><?php echo $_SESSION["Dtot"] ?></p>
+    <a href="main.php"><img src="vs.png" id="center"></img></a>
+    <p id="center">Player's Score:</p>
+    <br>
+    <p id="center"><?php echo $_SESSION["tot"] ?></p>
+  </div>
 
   <div class="container">
     <div class="die <?php echo $_SESSION["side1"] ?>"></div>
     <div class="die <?php echo $_SESSION["side2"] ?>"></div>
     <div class="die <?php echo $_SESSION["side3"] ?>"></div>
   </div>
+
+  <br>
 
   <form class="container2" method="post">
     <input type="submit" name="submit" value="ROLL" class="buttonRoll" id="<?php echo $_SESSION["rollVisible"] ?>">
