@@ -85,6 +85,8 @@
     }
   ?>
 
+  <h1>Dice Game</h1>
+
   <div class="container">
     <div class="die <?php echo $_SESSION["Dside1"] ?>"></div>
     <div class="die <?php echo $_SESSION["Dside2"] ?>"></div>

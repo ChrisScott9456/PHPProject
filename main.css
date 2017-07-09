@@ -1,3 +1,9 @@
+h1 {
+  margin: 20px auto;
+  font-size: 50px;
+  text-align: center;
+}
+
 .buttonRoll {
   background: #00FF00;
   color: #FFF;
@@ -34,23 +40,25 @@
 .container.mid {
   padding: 20px;
   margin: auto;
-  width: 697px;
+  width: 807px;
   height: 300px;
 }
 
 .container.mid.left {
   margin: 0;
+  width: 175px;
+  height: 75px;
+  font-size: 24px;
   text-align: center;
-  width: 120px;
-  height: 50px;
   display: inline-block;
 }
 
 .container.mid.right {
   margin: 0;
+  width: 175px;
+  height: 75px;
+  font-size: 24px;
   text-align: center;
-  width: 120px;
-  height: 50px;
   display: inline-block;
 }
 
